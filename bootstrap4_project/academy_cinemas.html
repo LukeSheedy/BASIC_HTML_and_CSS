@@ -40,6 +40,9 @@
                         <div class="container ">
                           <h1 class="display-4 text-light">Academy Cinemas</h1>
                           <p class="lead text-light">Sit back, relax, and enjoy the show...</p>
+                          <button type="button" class="btn btn-secondary btn-warning popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="You got 20% OFF Tickets!">
+                              Click for Chance to win!
+                            </button>
                         </div>
                 </div>
 
@@ -136,19 +139,73 @@
                    </div>
                      
                <!--showtimes-->
-                <!-- Deals-->
+               <div class="jumbotron jumbotron-fluid bg-info text-center">
+                  <div class="container ">
+                    <h1 class="display-4 text-light">Movie Deals</h1>
+                    <p class="lead text-light">Check out our monthly deals...</p>
+                    <!-- move deals-->
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register" >See our monthly movie deals!</button>
+                  </div>
+              </div>
 
 
+                <!-- INFO SUBMIT -->
                 <div class="text-center" id="deals">
                     <form>
                             <h3 class="text-primary my-5 ">Sign up for Movie Club Rewards!</h3>
                             <div class="form-group">                      
                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Submit your email to recieve great movie deals!">
+                                Sign up!
+                              </button>
                         </form>
                 </div>    
 
+              <!--form-->
+              <div class="modal fade" id="register">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Register to recieve movie deals...</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <fieldset class="form-group">
+                              <label for='firstname'>First Name:</label>
+                              <input type="text" class="form-control" id="firstname" placeholder="First Name...">
+                          </fieldset>
+                          <fieldset class="form-group">
+                              <label for='lastname'>Last Name:</label>
+                              <input type="text" class="form-control" id="lastname" placeholder="Last Name...">
+                          </fieldset>
+                          <fieldset class="form-group">
+                              <label for='email'>Email:</label>
+                              <input type="email" class="form-control" id="email" placeholder="Email...">
+                          </fieldset>
+                          <fieldset class="form-group">
+                              <label for='password'>Password:</label>
+                              <input type="password" class="form-control" id="password" placeholder="Password...">
+                          </fieldset>
+                        </form>
+
+
+
+
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <!--/form-->
+                <!--FOOTER-->
                 <div class="container my-5">
                         <ul class="nav nav-inline">
                             <li class="nav-item"></li>
@@ -174,5 +231,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+    $('.popover-dismiss').popover({
+      trigger: 'focus'
+    });
+    </script>
+  
+  
   </body>
 </html>
